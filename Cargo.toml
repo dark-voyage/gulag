@@ -1,0 +1,27 @@
+[package]
+name = "gulag"
+version = "0.1.0"
+authors = ["Sokhibjon <sakhib@orkzlv.uz>"]
+edition = "2018"
+license = "AGPL-3.0-or-later"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# not using features config and num-traits
+askama = { version = "0.10", default-features = false, features = ["humansize", "urlencode", "with-tide"] }
+askama_tide = "0.13"
+async-std = { version = "1.8.0", features = ["attributes"] }
+async-trait = "0.1.48"
+chrono = "0.4"
+git2 = { version="0.13", default-features = false }
+once_cell = "1.7.2"
+percent-encoding = "2.1"
+pico-args = "0.4"
+pulldown-cmark = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+# not using features dump-create and yaml-load
+syntect = { version = "4.5", default-features = false, features = ["assets", "dump-load", "html", "parsing", "regex-onig"] }
+# not using feeatures cookies and sessions
+tide = { version = "0.16", default-features = false, features = ["h1-server", "logger"] }
+toml = "0.5.8"
